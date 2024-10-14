@@ -9,6 +9,13 @@ module.exports = {
                 }]
             },
             {
+                source: '/home',
+                headers: [{
+                    key: 'Netlify-Vary',
+                    value: 'query=format'
+                }]
+            },
+            {
                 source: '/:path*',
                 headers: [{
                     key: 'Netlify-Vary',
