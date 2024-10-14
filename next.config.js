@@ -2,13 +2,6 @@ module.exports = {
     async headers() {
         return [
             {
-                source: '/:path*/',
-                headers: [{
-                    key: 'Netlify-Vary',
-                    value: 'query=format'
-                }]
-            },
-            {
                 source: '/:path*',
                 headers: [{
                     key: 'Netlify-Vary',
