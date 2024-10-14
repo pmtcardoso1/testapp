@@ -1,9 +1,8 @@
 module.exports = {
-    async rewrites() {
+    async headers() {
         return [
             {
                 source: '/',
-                destination: 'https://content.goe.menu/',
                 headers: [{
                     key: 'Netlify-Vary',
                     value: 'query'
@@ -11,11 +10,22 @@ module.exports = {
             },
             {
                 source: '/:path*',
-                destination: 'https://content.goe.menu/:path*',
                 headers: [{
                     key: 'Netlify-Vary',
                     value: 'query'
                 }]
+            },
+        ]
+    },
+    async rewrites() {
+        return [
+            {
+                source: '/',
+                destination: 'https://content.goe.menu/'
+            },
+            {
+                source: '/:path*',
+                destination: 'https://content.goe.menu/:path*'
             },
         ]
     },
