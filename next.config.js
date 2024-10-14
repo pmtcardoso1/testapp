@@ -4,12 +4,18 @@ module.exports = {
             {
                 source: '/',
                 destination: 'https://content.goe.menu/',
-                headers: { 'Netlify-Vary': 'query' },
+                headers: [{
+                    key: 'Netlify-Vary',
+                    value: 'query'
+                }]
             },
             {
                 source: '/:path*',
                 destination: 'https://content.goe.menu/:path*',
-                headers: { 'Netlify-Vary': 'query' },
+                headers: [{
+                    key: 'Netlify-Vary',
+                    value: 'query'
+                }]
             },
         ]
     },
