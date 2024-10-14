@@ -5,14 +5,14 @@ module.exports = {
                 source: '/',
                 headers: [{
                     key: 'Netlify-Vary',
-                    value: 'query'
+                    value: 'query=format'
                 }]
             },
             {
                 source: '/:path*',
                 headers: [{
                     key: 'Netlify-Vary',
-                    value: 'query'
+                    value: 'query=format'
                 }]
             },
         ]
